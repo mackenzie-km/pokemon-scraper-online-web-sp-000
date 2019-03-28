@@ -23,4 +23,6 @@ class Pokemon
     Pokemon.new(id: p_id, name: p_name, type: p_type, db: db)
   end
 
+  
+
 end
