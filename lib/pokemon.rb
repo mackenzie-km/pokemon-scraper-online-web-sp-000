@@ -13,7 +13,6 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
 
-<<<<<<< HEAD
   def self.find(l_id, db)
     found = db.execute("SELECT id, name, type FROM pokemon WHERE id = ?", l_id)
 
@@ -22,11 +21,6 @@ class Pokemon
     p_type = found[0][2]
 
     Pokemon.new(id: p_id, name: p_name, type: p_type, db: db)
-=======
-  def self.find(id, db)
-    found = db.execute("SELECT id, name, type FROM pokemon WHERE id = ?", id)
-    Pokemon.new(found, db)
->>>>>>> f3d103de2b8e6a7925707223bdb5abe50fffbf9d
   end
 
 end
